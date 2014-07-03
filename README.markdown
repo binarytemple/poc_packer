@@ -9,13 +9,25 @@ VirtualBox ( https://www.virtualbox.org/wiki/Downloads  )
 Packer ( `brew install packer` )
 Caching proxy running on port 8123 on all interfaces
 
-# Bugs...
 
-The preseed configuration file is located in `ubuntu_64_ldap_server/preseeds/preseed.cfg` but the only way I could get packer to find it, was to specify the absolute path to it in `ubuntu_64_ldap_server/ubuntu_sample.json` - as it currently stands - `/common/packer_poc/ubuntu_64_ldap_server/preseeds/preseed.cfg`
+# Installing and running the caching proxy 'polipo'
+
+```
+brew install polipo
 
 
-That *really needs* to be a relative path... 
+cat <<END > ~/.polipo
+proxyAddress=0.0.0.0
+disableIndexing=false
+disableServersList=false
+allowedClients=0.0.0.0/0
+diskCacheRoot=~/.polipo-cache
+END
 
+mkdir ~/.polipo-cache
+
+polipo 
+```
 
 # Usefull commands
 
