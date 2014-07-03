@@ -13,16 +13,13 @@
             ["modifyvm", "{{.Name}}", "--vram", "32"]
         ],
        
-       "http_directory" : "./",
-       "http_port_min" : 9001,
-        "http_port_max" : 9001,
         "disk_size" : 10000,
 
         "iso_url": "http://releases.ubuntu.com/precise/ubuntu-12.04.4-server-amd64.iso",
         "iso_checksum": "e83adb9af4ec0a039e6a5c6e145a34de",
         "iso_checksum_type": "md5",
 
-        "http_directory" : "/common/packer_poc/ubuntu_64_ldap_server/preseeds",
+        "http_directory" : "./ubuntu_64_ldap_server/preseeds",
         "http_port_min" : 9001,
         "http_port_max" : 9001,
 
