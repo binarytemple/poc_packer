@@ -7,6 +7,15 @@ Packer attempts to package Riak.
 
 VirtualBox ( https://www.virtualbox.org/wiki/Downloads  )
 Packer ( `brew install packer` )
+Caching proxy running on port 8123 on all interfaces
+
+# Bugs...
+
+The preseed configuration file is located in `ubuntu_64_ldap_server/preseeds/preseed.cfg` but the only way I could get packer to find it, was to specify the absolute path to it in `ubuntu_64_ldap_server/ubuntu_sample.json` - as it currently stands - `/common/packer_poc/ubuntu_64_ldap_server/preseeds/preseed.cfg`
+
+
+That *really needs* to be a relative path... 
+
 
 # Usefull commands
 

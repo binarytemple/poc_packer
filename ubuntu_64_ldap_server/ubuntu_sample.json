@@ -33,7 +33,7 @@
             "<esc><esc><enter><wait>",
             "/install/vmlinuz noapic ",
             "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg ",
-            "d-i:mirror/http/proxy=http://{{ .HTTPIP }}:8123 ",
+            "d-i:general_http_proxy=http://{{ .HTTPIP }}:8123 ",
             "d-i:after_script=http://{{ .HTTPIP }}:{{ .HTTPPort }}/after_script.sh ",
             "debian-installer=en_US auto locale=en_US kbd-chooser/method=us ",
             "hostname={{user `hostname`}} ",
