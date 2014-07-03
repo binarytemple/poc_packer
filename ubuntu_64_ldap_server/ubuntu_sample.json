@@ -19,7 +19,7 @@
         "iso_checksum": "e83adb9af4ec0a039e6a5c6e145a34de",
         "iso_checksum_type": "md5",
 
-        "http_directory" : "/common/packer_poc/ubuntu_64_ldap_server/preseeds",
+        "http_directory" : "/Volumes/ramdisk/poc_packer/ubuntu_64_ldap_server/preseeds",
         "http_port_min" : 9001,
         "http_port_max" : 9001,
 
