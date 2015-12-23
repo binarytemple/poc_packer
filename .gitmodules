@@ -6,4 +6,4 @@
 	url = git@github.com:binarytemple/ansible-role-packer-debian.git
 [submodule "ansible/roles/binarytemple.nfs"]
 	path = ansible/roles/binarytemple.nfs
-    url = git@github.com:binarytemple/ansible-role-nfs.git
+	url = git@github.com:binarytemple/ansible-role-nfs.git

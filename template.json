@@ -7,11 +7,18 @@
     },
     {
       "type": "ansible-local",
+      "inventory_file": "ansible/hosts",
       "playbook_file": "ansible/main.yml",
       "role_paths": [
+        "./ansible/roles/binarytemple.nfs",
         "./ansible/roles/binarytemple.packer-rhel",
         "./ansible/roles/binarytemple.packer-debian"
       ]
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/cleanup.sh"
     }
   ],
   "builders": [
@@ -42,6 +49,7 @@
       "iso_checksum_type": "md5",
       "iso_checksum": "9e5fecc94b3925bededed0fdca1bd417",
       "output_directory": "packer-ubuntu-14.04-amd64-vmware",
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
