@@ -1,0 +1,9 @@
+[submodule "ansible/roles/binarytemple.packer-rhel"]
+	path = ansible/roles/binarytemple.packer-rhel
+	url = git@github.com:binarytemple/ansible-role-packer-rhel.git
+[submodule "ansible/roles/binarytemple.packer-debian"]
+	path = ansible/roles/binarytemple.packer-debian
+	url = git@github.com:binarytemple/ansible-role-packer-debian.git
+[submodule "ansible/roles/binarytemple.nfs"]
+	path = ansible/roles/binarytemple.nfs
+    url = git@github.com:binarytemple/ansible-role-nfs.git
